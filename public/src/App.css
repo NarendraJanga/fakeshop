@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+.k {
+  margin-left: 7%;
+}
+
+.p {
+  font-size: 15px;
+}
+
+.card-img-top:hover {
+  transition: 1s;
+  transform: scale(0.9) skew(-5deg) translateX(-10px);
+}
+
+/* Styling for the <p> tag */
+#p {
+  font-size: 16px;
+  /* Adjust font size as needed */
+  line-height: 1.6;
+  /* Adjust line height for better readability */
+  color: #333;
+  /* Text color */
+  margin-bottom: 20px;
+  /* Add some space below each paragraph */
+}
+
+/* Example: Add animation to <p> tags */
+#p {
+  animation-name: fadeIn;
+  /* Name of the animation */
+  animation-duration: 0.5s;
+  /* Duration of the animation */
+  animation-timing-function: ease-in-out;
+  /* Timing function */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    /* Start with transparency */
+  }
+
+  to {
+    opacity: 1;
+    /* Fade in to full opacity */
+  }
+}
+
+/* Example: Add border and padding to <p> tags */
+#p {
+  border: 1px solid #ccc;
+  /* Border color and thickness */
+  padding: 10px;
+  /* Add padding inside the paragraph */
+  border-radius: 5px;
+  /* Rounded corners */
+}
+
+/* Example: Hover effect for <p> tags */
+#p:hover {
+  background-color: #f0f0f0;
+  /* Change background color on hover */
+}
+
+#p {
+  animation-name: rotateAndSkew slideInFromLeft;
+  /* Combined animation names */
+  animation-duration: 1s;
+  /* Choose your animation duration */
+  animation-fill-mode: both;  
+  transform-origin: center;
+  /* Rotate around the center */
+  animation-delay: 0.5s;
+  /* Optional delay before slideInFromLeft animation starts */
+}
+
+@keyframes rotateAndSkew {
+  0% {
+    transform: rotate(0deg) skew(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg) skew(20deg);
+  }
+
+  100% {
+    transform: rotate(360deg) skew(-20deg);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-text {
+  font-size: x-large;
+  display: inline-block;
+  animation: marqueeAnimation 15s linear infinite;
+}
+
+@keyframes marqueeAnimation {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+.custom-footer {
+  background-color: #333;
+  color: #fff;
+}
+
+.custom-footer h4 {
+  color: #fff;
+}
+
+.custom-footer ul li {
+  color: #ccc;
+}
+
+.payment-icons i {
+  font-size: 1.5em; /* Adjusted icon size for mobile */
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .custom-footer .col-md-6 {
+      flex-basis: 50%;
+      max-width: 50%;
+  }
+}
+/* Add your custom styles here */
+.card {
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.success-message,
+.error-message {
+  margin-top: 10px;
+}
